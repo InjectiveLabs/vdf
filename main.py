@@ -1,7 +1,13 @@
 import go_wrapper as sloth
-p=sloth.go_wrapper("")
-print(p.Sloth_fixed_delay("1024" , "83478237" , "1024"))
 
+
+p=sloth.go_wrapper("")
+print(p.Sloth_elapsed_time("64" , "83478237" , "1024"))
+
+
+
+
+# ZRX ORDER SCHEMA
 # {
 #     "id": "/orderSchema",
 #     "properties": {

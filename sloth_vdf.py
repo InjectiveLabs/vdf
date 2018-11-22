@@ -1,3 +1,7 @@
+# This is a Sloth implementation (modular square root) in python
+# Should be used only as a concept code since it is extremely unoptimized
+
+
 import datetime
 import time
 
