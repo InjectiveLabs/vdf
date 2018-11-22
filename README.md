@@ -10,13 +10,9 @@ cd go_src/candidates
 ### Prerequisites
 
 ```
-Python 3.7.0
+Python 2.7.1
 ```
 ### Run
 ```
-python3 main.py
-```
-or
-```angular2html
 python main.py
 ```

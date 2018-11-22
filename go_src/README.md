@@ -1,2 +1,0 @@
-# VDF
-VDF Implementations
