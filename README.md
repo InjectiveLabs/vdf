@@ -13,6 +13,7 @@ cd go_src/candidates
 Python 2.7.1
 ```
 ### Run
+In ``main.py`` we run an example VDF operation over a 128bit prime field.
 ```
 python main.py
 ```
