@@ -69,6 +69,10 @@ extern "C" {
 
 extern char* Sloth_fixed_delay(GoString p0, GoString p1, GoString p2);
 
+extern char* Sloth_eval(GoString p0, GoString p1, GoString p2);
+
+extern char* Sloth_verify(GoString p0, GoString p1, GoString p2, GoString p3);
+
 #ifdef __cplusplus
 }
 #endif
