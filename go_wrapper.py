@@ -16,9 +16,9 @@ class go_wrapper:
     def Sloth_fixed_delay(self, p , x , t):
         self.lib.Sloth_fixed_delay.argtypes = [GoString, GoString, GoString]
         self.lib.Sloth_fixed_delay.restype = c_char_p
-        p = GoString(c_char_p(p), len(p))
-        x = GoString(c_char_p(x), len(x))
-        t = GoString(c_char_p(t), len(t))
+        p = GoString(c_char_p(p.encode('utf-8')), len(p))
+        x = GoString(c_char_p(x.encode('utf-8')), len(x))
+        t = GoString(c_char_p(t.encode('utf-8')), len(t))
 
         return self.lib.Sloth_fixed_delay(p,x,t)
 
@@ -26,16 +26,22 @@ class go_wrapper:
     # t is the number of iteration of the VDF operation
     def Sloth_elapsed_time(self, p , x , t):
         iteration=t
-        self.lib.Sloth_fixed_delay.argtypes = [GoString, GoString, GoString]
+        self.lib.Sloth_fixed_delay.argtypes = [c_char_p, c_char_p, c_char_p]
         self.lib.Sloth_fixed_delay.restype = c_char_p
-        p = GoString(c_char_p(p), len(p))
-        x = GoString(c_char_p(x), len(x))
-        t = GoString(c_char_p(t), len(t))
-        i=0
+        # p = GoString(c_char_p(p.encode('utf-8')), len(p))
+        print(c_char_p(x.encode('utf-8')))
+        # x = GoString(c_char_p(x.encode('utf-8')), len(x))
+        # t = GoString(c_char_p(t.encode('utf-8')), len(t))
+        i=1
+
+        y = self.lib.Sloth_fixed_delay(c_char_p(p.encode('utf-8')), c_char_p(x.encode('utf-8')),
+                                       c_char_p(t.encode('utf-8')))
         while True:
-            y=self.lib.Sloth_fixed_delay(p,x,t)
+            x=y
+            y=self.lib.Sloth_fixed_delay(c_char_p(p.encode('utf-8')), x,c_char_p(t.encode('utf-8')))
+            print(y)
             i+=1
-            x=GoString(y,len(y))
+            print(x)
             print("Total Iterations: ",int(iteration)*i)
     # go file should be in the root directory of the lib... unless changed otherwise
     def __init__(self):

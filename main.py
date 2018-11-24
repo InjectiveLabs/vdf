@@ -1,5 +1,8 @@
 import go_wrapper as sloth
 
+from flask import Flask
+app = Flask(__name__)
+
 # same parameters for both Sloth_elapsed_time and Sloth_fixed_delay:
 #  ( p , x , t ) all String
 # p: security parameter, how many bits prime. The actual prime number is stored in go_src/vdf_interface.go
