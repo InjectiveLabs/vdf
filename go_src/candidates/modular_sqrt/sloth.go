@@ -116,7 +116,7 @@ func Fixed_delay(args [3]string) string{
 	var p, _ = new(big.Int).SetString( args[0], 0)
 	var x, _ = new(big.Int).SetString( args[1] ,0 )
 	var t, _ = strconv.ParseInt(args[2] ,10 ,64 )
-	fmt.Println("Iteration Count: ", int(t), "\t Starting Value: ",x.Int64())
+	fmt.Println("Iteration Count: ", int(t), "\t Starting Value: ",x.String())
 	start:=time.Now()
 	y:=modsqrt_op(int(t),x,p)
 	cur:=time.Now()
@@ -129,6 +129,20 @@ func Fixed_delay(args [3]string) string{
 	elapsed=cur.Sub(start).Seconds()
 	println("Verify Elapsed: ", fmt.Sprintf("%.5f", elapsed), "sec")
 	return y.String()
+}
+func Eval(args [3]string) string{
+	var p, _ = new(big.Int).SetString( args[0], 0)
+	var x, _ = new(big.Int).SetString( args[1] ,0 )
+	var t, _ = strconv.ParseInt(args[2] ,10 ,64 )
+	y:=modsqrt_op(int(t),x,p)
+	return y.String()
+}
+func Verify(args [4]string) bool{
+	var p, _ = new(big.Int).SetString( args[0], 0)
+	var x, _ = new(big.Int).SetString( args[1] ,0 )
+	var t, _ = strconv.ParseInt(args[2] ,10 ,64 )
+	var y, _ = new(big.Int).SetString( args[3] ,0 )
+	return verify(int(t),x,y,p)
 }
 
 //arguments [ prime number, starting value ]

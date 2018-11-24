@@ -1,7 +1,5 @@
 import go_wrapper as sloth
 
-from flask import Flask
-app = Flask(__name__)
 
 # same parameters for both Sloth_elapsed_time and Sloth_fixed_delay:
 #  ( p , x , t ) all String
@@ -15,11 +13,12 @@ app = Flask(__name__)
 # t: the number of iterations every loop (within an infinite loop)
 
 p=sloth.go_wrapper()
-print(p.Sloth_elapsed_time("128" , "83478237" , "99999"))
 
-
-
-
+y=p.Sloth_eval("1024" , "8239479" , "9")
+print("Ending Value: ",y)
+result= p.Sloth_verify("1024","8239479","9",y)
+# keep in mind that result is a string
+print("verified: ",result)
 # ZRX ORDER SCHEMA
 # {
 #     "id": "/orderSchema",
