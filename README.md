@@ -14,6 +14,7 @@ Python 2.7.1
 ```
 Note: `vdf_interface` is built for MacOS. Rebuild VDF interface in go_src if you are operating on another OS.
 ### Run
+
 In ``main.py`` we run an example VDF operation over a 128bit prime field.
 ```
 python main.py
