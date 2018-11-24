@@ -20,7 +20,6 @@ In ``main.py`` we run an example VDF operation over a 128bit prime field.
 python main.py
 ```
 ## Intro to VDF
-
 VDF is a tuple of three algorithms:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Setup(\lambda,&space;T)\rightarrow&space;pp" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Setup(\lambda,&space;T)\rightarrow&space;pp" title="Setup(\lambda, T)\rightarrow pp" /></a>
@@ -63,3 +62,7 @@ acquire the starting value ``x``.
 For a faster verification, we can use SNARK proofs to be submitted along with ``y``. 
 However, if we want better a verification vs. evaluation gap, there are better candidates 
 for it. 
+
+### Time Proof
+In our protocol,``t`` is the time parameter for proof of elapsed time. In the context of Sloth, ``t`` 
+is the number of modular square root evaluation. ``t`` can be computed incrementally for it to become a time proof.
