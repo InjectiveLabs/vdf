@@ -1,12 +1,11 @@
-# VDF
-VDF Implementations
-
 ## Getting started
-This is a simple implementation of Verifiable Delay Function. We have a Golang implementation of 
-two candidates including Piertzak VDF (Simple VDF) and Sloth (Modular Square Root). You can locate the candidates in
+We provide VDF (Verifiable Delay Function) Implementations in Golang for two candidate VDFs which are the Piertzak VDF (Simple VDF) and Sloth (Modular Square Root). You can locate the candidates in
 ``
 cd go_src/candidates
 ``.
+
+We also provide a server providing VDF computation over HTTP. Run it by calling ``python server/main.py``. 
+
 ### Prerequisites
 
 ```
