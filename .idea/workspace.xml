@@ -31,7 +31,8 @@
           <entry key="h" value="2" />
           <entry key="json" value="1" />
           <entry key="md" value="3" />
-          <entry key="py" value="6" />
+          <entry key="py" value="7" />
+          <entry key="so" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -39,19 +40,19 @@
           <entry key="C++" value="2" />
           <entry key="JSON" value="1" />
           <entry key="Markdown" value="3" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="6" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="3765" />
+          <entry key="md" value="3924" />
           <entry key="py" value="1451" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="3765" />
+          <entry key="Markdown" value="3924" />
           <entry key="Python" value="1451" />
         </counts>
       </usages-collector>
@@ -86,10 +87,26 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="517">
-                <caret line="65" column="115" selection-start-line="65" selection-start-column="115" selection-end-line="65" selection-end-column="115" />
+              <first_editor relative-caret-position="210">
+                <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/go_src/vdf_interface.so">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1291" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sloth_vdf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -98,26 +115,16 @@
         <entry file="file://$PROJECT_DIR$/order.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vdf_interface.h">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go_src/vdf_interface.h">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/go_src/candidates/modular_sqrt/sloth.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="133" column="20" lean-forward="true" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+              <caret line="133" column="20" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -311,13 +318,6 @@
     <entry file="file://$PROJECT_DIR$/go_src/candidates/simple_vdf/pvdf.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sloth_vdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/go_src/vdf_interface.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -330,7 +330,7 @@
     <entry file="file://$PROJECT_DIR$/go_src/candidates/modular_sqrt/sloth.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="133" column="20" lean-forward="true" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+          <caret line="133" column="20" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -343,11 +343,23 @@
     <entry file="file://$PROJECT_DIR$/venv2.7/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/go_wrapper.py">
+    <entry file="file://$PROJECT_DIR$/order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sloth_vdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_src/vdf_interface.so">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1291" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -357,18 +369,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/order.py">
+    <entry file="file://$PROJECT_DIR$/go_wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="205">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="517">
-            <caret line="65" column="115" selection-start-line="65" selection-start-column="115" selection-end-line="65" selection-end-column="115" />
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           </first_editor>
           <second_editor />
         </state>
