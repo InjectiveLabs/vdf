@@ -26,8 +26,8 @@ class go_wrapper:
         p = GoString(c_char_p(p.encode('utf-8')), len(p))
         x = GoString(c_char_p(x.encode('utf-8')), len(x))
         t = GoString(c_char_p(t.encode('utf-8')), len(t))
-        return self.lib.Sloth_eval(p, x, t)
-
+        y=self.lib.Sloth_eval(p, x, t)
+        return y.decode('utf-8')
 
     # input:
     # beyond variables mentioned in Sloth_eval, we also have:
@@ -43,7 +43,7 @@ class go_wrapper:
         t = GoString(c_char_p(t.encode('utf-8')), len(t))
         y = GoString(c_char_p(y.encode('utf-8')), len(y))
         result = self.lib.Sloth_verify(p, x, t , y)
-        return result
+        return result.decode('utf-8')
 
 
 
