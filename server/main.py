@@ -12,7 +12,7 @@ _pool = None
 def vdf(p, input, time):
     # do your expensive time consuming process
     v = go_wrapper.go_wrapper()
-    y = v.Sloth_eval(p,x,t)
+    y = v.Sloth_eval(p,input,time)
     return y
 
 def verify (p,x,t,y):
