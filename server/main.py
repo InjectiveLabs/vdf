@@ -29,6 +29,7 @@ def compute():
     if validate(input, time):
          f = _pool.apply_async(vdf, (p,input,time))
          r = f.get(timeout=2) # timeout probably should be a function of time with a max cap
+         r=hex(int(r))
          return r
     return "Fail message" # change to HTTP response
 
