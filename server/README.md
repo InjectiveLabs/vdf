@@ -1,4 +1,4 @@
-main.py defines a multi-processor VDF microservice that receives as input a starting value (e.g. trade hash hex) and time value $t$ (number of VDF iterations) and computes $t$ iterations of the modular square root function, returning an output. 
+main.py defines a multi-processor VDF microservice that receives as input a starting value (e.g. trade hash hex) and time value t (number of VDF iterations) and computes t iterations of the modular square root function, returning an output. 
 
 Run the VDF server with `python server/main.py` which spawns the server on `localhost:5000` and test it using `curl  localhost:5000/vdf -d "input=0x3338be694f50c5f338814986cdf0686453a888b84f424d792af4b9202398f392&time=20555"  -X POST -i`
 
