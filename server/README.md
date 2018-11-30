@@ -1,5 +1,5 @@
 
-###vdf(p,x,t)
+### vdf(p,x,t)
 
 Input:
 
@@ -21,7 +21,7 @@ We do not need proof for this candidate algorithm. But for other VDF candidate a
 **not used:** `proof` (string): a list of hexadecimal numbers separated/delimited by `,`.
 
 
-###verify(p,x,t,y)
+### verify(p,x,t,y)
 
 
 Input:
