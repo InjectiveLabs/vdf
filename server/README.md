@@ -5,7 +5,43 @@ Run the VDF server with `python server/main.py` which spawns the server on `loca
 ```
 curl  localhost:5000/vdf -d "input=0x3338be694f50c5f338814986cdf0686453a888b84f424d792af4b9202398f392&time=20555"  -X POST -i
 ```
+### POST Schema
+POST data is formatted as follow:
 
+#### `/vdf`
+`/vdf` opens a thread to evaluate verifiable delay function (VDF) and responds with the result of the VDF.
+ The default security parameter (the selected `p` prime field) is 256 bit.
+
+Request:
+
+`input` (string): This is the input or starting value of the VDF,
+ it can accept either decimal or hexadecimal numbers. If the input is hexadecimal, ensure that prefix "0x" is present 
+ or else an error will be returned. 
+
+`time` (string): This is the time variable of the VDF, it defines how many iterations the VDF will undergo. The larger
+the time variable, the longer it takes (linearly) for the VDF evaluation to finish. It can only accept decimal numbers.
+
+Response (string): After the VDF evaluation completes, the server will respond with the result of VDF calculation in
+hexadecimal form.
+
+#### `/verify`
+
+`/verify` opens a thread to verify the result or output of the verifiable delay function and responds with `verification
+successful` or `verification failed`.
+
+Request:
+
+`input` (string): same as `/vdf`
+
+`time` (string): same as `/vdf`
+
+`output` (string): Corresponds with the response part in `/vdf`. Takes in the result of VDF in either decimal numbers 
+or hexadecimal numbers with prefix `0x`.
+
+Response (string): If the vdf calculation is correct, response will be `verification successful`. Otherwise, it will
+be `verification failed`
+
+## main.py methods
 ### vdf(p,x,t)
 
 Input:
