@@ -2,7 +2,7 @@ from flask import Flask
 from flask import request
 import time
 from multiprocessing import Pool
-import go_wrapper as vdf
+import go_wrapper
 # predefine security parameter
 p="256"
 app = Flask(__name__)
@@ -11,7 +11,7 @@ _pool = None
 # all int args
 def vdf(p, input, time):
     # do your expensive time consuming process
-    v = vdf.go_wrapper()
+    v = go_wrapper.go_wrapper()
     y = v.Sloth_eval(p,x,t)
     return y
 
@@ -34,7 +34,8 @@ def compute():
 
 # Make sure that input and time have the correct form
 def validate(input, time):
-    return True
+    if not (input==None and time==None):
+        return True
 
 
 if __name__ == '__main__':
