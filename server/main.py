@@ -16,7 +16,7 @@ def vdf(p, input, time):
     return y
 
 def verify (p,x,t,y):
-    v = vdf.go_wrapper()
+    v = go_wrapper.go_wrapper()
 
     return v.Sloth_verify(p,x,t,y)=="true"
 
@@ -31,6 +31,25 @@ def compute():
          r = f.get(timeout=2) # timeout probably should be a function of time with a max cap
          return r
     return "Fail message" # change to HTTP response
+
+@app.route('/verify', methods=['POST'])
+def confirm():
+    input = request.form.get('input')
+    time = request.form.get('time')
+    output = request.form.get('output')
+    print(input, output, time)
+    # perform validation, invoke executable, retreive output, return
+    if validate(input, time):
+         f = _pool.apply_async(verify, (p,input,time,output))
+         r = f.get(timeout=2) # timeout probably should be a function of time with a max cap
+         # result is a bool
+         if r:
+             return "verification successful"
+         else:
+             return "verification failed"
+
+    return "Fail message" # change to HTTP response
+
 
 # Make sure that input and time have the correct form
 def validate(input, time):
